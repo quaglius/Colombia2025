@@ -245,10 +245,10 @@
                                     `).join("")}
                                 </div>
                                 <div class="item-details">
-                                    <div class="item-name">📝 ${row.Item || "Sin nombre"}</div>
+                                    <div class="item-name">📦 ${row.Item || "Sin nombre"}</div>
                                     <div>🔗 <a href="${row.Referencia}" target="_blank">Referencia</a></div>
                                     <div class="item-price">💰 ${row.Valor || "-"} <span class="item-original-price">💸 ${row["Precio Nuevo"] || "-"}</span></div>
-                                    <div class="item-status">📦 ${row.Estado || "N/A"}</div>
+                                    <div class="item-status"> ${row.Estado || "N/A"}</div>
                                     ${hasStatus ? `<div class="item-status">⭐ Estado: ${row.Status}</div>` : ""}
                                     ${hasMeasures ? `<div class="item-status">📏 Medidas: ${row.Medidas}</div>` : ""}
                                     ${isNotAvailable ? "" : `<a href="https://api.whatsapp.com/send/?phone=5491122515658&text=Hola, me interesa el artículo: ${row.Item}%27" class="whatsapp-link" target="_blank">💬 Preguntar por WhatsApp</a>`}
