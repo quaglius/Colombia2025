@@ -241,7 +241,7 @@
                             <div class="item-card ${isNotAvailable ? "no-available" : ""}">
                                 <div class="item-image-container ${isSingleImage ? "single" : ""}">
                                     ${images.map((img, index) => `
-                                        <img src="https://drive.google.com/thumbnail?id=${img}&sz=s400" class="item-image img-thumbnail" data-index="${index}" alt="Imagen ${index + 1}" />
+                                        <img src="https://drive.google.com/thumbnail?id=${img}&sz=s4000" class="item-image img-thumbnail" data-index="${index}" alt="Imagen ${index + 1}" />
                                     `).join("")}
                                 </div>
                                 <div class="item-details">
@@ -270,7 +270,7 @@
 
         document.addEventListener("click", function (e) {
             if (e.target.classList.contains("item-image")) {
-                const imgSrc = e.target.src.replace("&sz=s400", ""); // Usa tamaño original
+                const imgSrc = e.target.src; // Usa tamaño original
                 const popup = document.createElement("div");
                 popup.className = "image-popup";
                 popup.innerHTML = `
